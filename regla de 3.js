@@ -9,22 +9,94 @@ var dato4 = document.getElementById("magnitud1_dato2");
 var dato5 = document.getElementById("magnitud2_dato2");
 var dato6 = document.getElementById("magnitud3_dato2");
 
+var box1 = document.getElementById("check-box1");
+var box2 = document.getElementById("check-box2");
+var box3 = document.getElementById("check-box3");
+
+check1 = box1.checked;
+    if (check1 == true) {
+        axy= "x";
+    }
+    else {
+        axy= "y";
+    }
+
+
 var txt1Value, txt2Value, txt3Value;
+var datos = [];
+var datos_object = [];
 
+var base_de_datos = [
+    datos,
+    datos_object,
+]
+var i = 0;
 
+var datoID, largo_datos;
+var magnitud1, magnitud2, magnitud3, datoX;
 
 function sumit () {
     txt1Value = txt1.value;
     txt2Value = txt2.value;
-    txt3Value = txt3.value;    
+    txt3Value = txt3.value;  
 
-    mag1_date1 = parseInt(dato1.value);
-    mag2_date1 = parseInt(dato2.value);
-    mag3_date1 = parseInt(dato3.value);
+    mag1_date1 = dato1.value;
+    mag2_date1 = dato2.value;
+    mag3_date1 = dato3.value;
 
-    mag1_date2 = parseInt(dato4.value);
-    mag2_date2 = parseInt(dato5.value);
-    mag3_date2 = parseInt(dato6.value);
+    mag1_date2 = dato4.value;
+    mag2_date2 = dato5.value;
+    mag3_date2 = dato6.value;
+
+    datos = [
+        mag1_date1,
+        mag2_date1,
+        mag3_date1, 
+
+        mag1_date2, 
+        mag2_date2,
+        mag3_date2,
+    ];
+
+    magnitud1 = {
+        valor1: mag1_date1,
+        valor2: mag1_date2 
+    };
+
+    magnitud2 = {
+        valor1: mag2_date1,
+        valor2: mag2_date2
+    };
+
+    magnitud3 = {
+        valor1: mag3_date1,
+        valor2: mag3_date2
+    };
+
+    datos_object = [
+        magnitud1,
+        magnitud2,
+        magnitud3
+    ];
+
+    datos_object.forEach(element =>  {
+        console.log(element)
+        if (element.valor2 === "x") {
+            datoX = element.valor2;
+            console.log("el dato con la x es: " + datoX + " y i es: " + i);
+        } else {
+            console.log("el dato sin la x es: " + datoX + " y i es: " + i);
+        }
+    });
+    while (i <= largo_datos) {
+        if (datos_object[i].valor2 === "x") {
+            datoX = datos_object[i].valor2;
+            console.log("el dato con la x es: " + datoX + " y i es: " + i);
+        } else {
+            console.log("el dato sin la x es: " + datoX + " y i es: " + i);
+        }
+        i++;
+    }
 }
 
 function operaciones() {
