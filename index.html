@@ -19,20 +19,46 @@
     <div>
         <h3>instruciones</h3>
         <p>ponga los nombres de las magnitudes</p>
-        <p>Y despues los datos de las magnitudes</p>
-        <input type="text" placeholder="magnitud 1" id="magnitud 1">
-        <input type="text" placeholder="magnitud 2" id="magnitud 2">
-        <input type="text" placeholder="magnitud 3" id="magnitud 3">
+        <p>ahz click en el checkbox si la magnitud es inversa, a la magnitud a despejar. Si es la magnitud a despejar no hacer nada</p>
+
+        <form action="">
+            <input type="text" placeholder="magnitud 1" id="magnitud 1" required>
+            <label for="check1">
+                <samp>es inversa</samp>
+                <input type="checkbox" value="1" id="check1" required>
+            </label>
+
+            <input type="text" placeholder="magnitud 2" id="magnitud 2" required>
+            <label for="check2">
+                <samp>es inversa</samp>
+                <input type="checkbox" value="1" id="check2" required>
+            </label>
+
+            <input type="text" placeholder="magnitud 3" id="magnitud 3" required>
+            <label for="check3">
+                <samp>es inversa</samp>
+                <input type="checkbox" value="1" id="check3">
+            </label>
+            /
+            <label for="btn_names">
+                <samp>enviar magnitudes</samp>
+                <button onclick="myFunction()" id="btn_names">dar nombres</button>
+            </label>
+        </form>
 
         <br>
-        <input type="number" placeholder="dato1" id="magnitud1_dato1">
-        <input type="number" placeholder="dato1" id="magnitud2_dato1">
-        <input type="number" placeholder="dato1" id="magnitud3_dato1">
+        <p>Y despues los datos de las magnitudes, si es la magnitud incognita poner una x</p>
+
+        <input type="text" placeholder="dato1" id="magnitud1_dato1">
+        <input type="text" placeholder="dato1" id="magnitud2_dato1">
+        <input type="text" placeholder="dato1" id="magnitud3_dato1">
         <br>
-        <input type="number" placeholder="dato2" id="magnitud1_dato2">
-        <input type="number" placeholder="dato2" id="magnitud2_dato2">
-        <input type="number" placeholder="dato2" id="magnitud3_dato2">
+        <input type="text" placeholder="dato2" id="magnitud1_dato2">
+        <input type="text" placeholder="dato2" id="magnitud2_dato2">
+        <input type="text" placeholder="dato2" id="magnitud3_dato2">
     </div>
     <p>resultado = </p>
+
+    <script src="./regla de 3.js"></script>
 </body>
 </html>
