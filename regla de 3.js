@@ -33,7 +33,7 @@ var base_de_datos = [
 var i = 0;
 
 var datoID, largo_datos;
-var magnitud1, magnitud2, magnitud3, datoX;
+var magnitud1, magnitud2, magnitud3, datoID;
 
 function sumit () {
     txt1Value = txt1.value;
@@ -79,24 +79,16 @@ function sumit () {
         magnitud3
     ];
 
-    datos_object.forEach(element =>  {
-        console.log(element)
+    for (let i = 0; i < datos_object.length-1; i++) {
+        var element = datos_object[i];
         if (element.valor2 === "x") {
-            datoX = element.valor2;
-            console.log("el dato con la x es: " + datoX + " y i es: " + i);
+            datoID = i;
+            console.log("el dato con la x es: " + element.valor2 + " y i es: " + i);
         } else {
-            console.log("el dato sin la x es: " + datoX + " y i es: " + i);
+            console.log("el dato sin la x es: " + element.valor2 + " y i es: " + i);
         }
-    });
-    while (i <= largo_datos) {
-        if (datos_object[i].valor2 === "x") {
-            datoX = datos_object[i].valor2;
-            console.log("el dato con la x es: " + datoX + " y i es: " + i);
-        } else {
-            console.log("el dato sin la x es: " + datoX + " y i es: " + i);
-        }
-        i++;
     }
+
 }
 
 function operaciones() {
