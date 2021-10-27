@@ -9,32 +9,34 @@
     <title>regla de 3</title>
     <!-- viewport es la panta completa / dar scala -->
     <meta name="viewport" content="width=device-width, inical-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="master">
     <header>
         <h1>RD3</h1>
         <p>RD3 es una herramienta para resolver reglas de ters con mayor facilidad</p>
+        <body background="./mat.png">
     </header>
-    <div>
+    <div class="conteiner" >
         <h3>instruciones</h3>
         <p>ponga los nombres de las magnitudes</p>
         <p>ahz click en el checkbox si la magnitud es inversa, a la magnitud a despejar. Si es la magnitud a despejar no hacer nada</p>
 
         <form action="">
-            <input type="text" placeholder="magnitud a despejar" id="magnitud 1" required>
+            <input type="text" autocomplete="off" placeholder="magnitud a despejar" id="magnitud 1" >
             <label for="check-box1">
                 <samp>es inversa</samp>
                 <input type="checkbox" value="1" id="check-box1" />
             </label>
 
-            <input type="text" placeholder="magnitud 2" id="magnitud 2" required>
+            <input type="text" autocomplete="off" placeholder="magnitud 2" id="magnitud 2" >
             <label for="check-box2">
                 <samp>es inversa</samp>
                 <input type="checkbox" value="1" id="check-box2" />
             </label>
 
-            <input type="text" placeholder="magnitud 3" id="magnitud 3" required>
+            <input type="text" autocomplete="off" placeholder="magnitud 3" id="magnitud 3" >
             <label for="check-box3">
                 <samp>es inversa</samp>
                 <input type="checkbox" value="1" id="check-box3" />
@@ -42,40 +44,37 @@
             /
             <label for="btn_names">
                 <samp>enviar magnitudes</samp>
-<<<<<<< HEAD
-                <button onclick="sumit ()" id="btn_names">dar nombres</button>
-=======
-                <button onclick="fuciones()" id="btn_names">dar nombres</button>
->>>>>>> master
+                <button type="button" onclick="sumit ()" id="btn_names" >dar nombres</button>
             </label>
         </form>
 
         <br>
         <p>Y despues los datos de las magnitudes, si es la magnitud incognita poner una x</p>
 
-        <div>
-        <input type="text" id="text_conainer1" readonly>
-        <input type="text" id="text_conainer2" readonly>
-        <input type="text" id="text_conainer3" readonly> 
+        <div class="borar">
+        <input type="text" autocomplete="off" id="text_ autocomplete="off"conainer1" readonly>
+        <input type="text" autocomplete="off" id="text_ autocomplete="off"conainer2" readonly>
+        <input type="tex autocomplete="off"t" id="tex autocomplete="off"t_conainer3" readonly> 
         </div>
 
-        <form action="">
+      <form action="">
             <label for="magnitud1_dato1">
-        <input type="text" placeholder="dato1" id="magnitud1_dato1">
-        <input type="text" placeholder="dato1" id="magnitud2_dato1">
-        <input type="text" placeholder="dato1" id="magnitud3_dato1"> 
-        <span>mangnitudes iniciales o de ejemplo</span>
+        <input type="te autocomplete="off"xt" placeholder="dato1" id="magnitud1_dato1">
+     <input type="te autocomplete="off"xt" placeholder="dato1" id="magnitud2_dato1">
+     <input type="tex autocomplete="off"t" placeholder="dato1" id="magnitud3_dato1"> 
+      <span>mangnitudes iniciales o de ejemplo</span>
     </label>
         <br>
         <label for="magnitud1_dato2">
-        <input type="text" placeholder="x" id="magnitud1_dato2" value="x" readonly>
-        <input type="text" placeholder="dato2" id="magnitud2_dato2">
-        <input type="text" placeholder="dato2" id="magnitud3_dato2">
-        <samp>magnitudes segundas o de despeje, tambien x</samp>
+        <input type="text" autocomplete="off" placeholder="x" id="magnitud1_dato2" value="x" readonly>
+        <input type="te autocomplete="off"xt" placeholder="dato2" id="magnitud2_dato2">
+     <input type="te autocomplete="off"xt" placeholder="dato2" id="magnitud3_dato2">
+     <samp>magnitudes segundas o de despeje, tambien x</samp>
     </label>
     </form>
-    </div>
     <p id="resultado"> </p>
+    </div>
+    </div>
     <script src="./regla de 3.js"></script>
 </body>
 </html>
