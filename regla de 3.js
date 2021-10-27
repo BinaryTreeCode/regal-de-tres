@@ -35,6 +35,21 @@ var i = 0;
 var datoID, largo_datos;
 var magnitud1, magnitud2, magnitud3, datoX;
 
+var nombre1 = document.getElementById("text_conainer1");
+var nombre2 = document.getElementById("text_conainer2");
+var nombre3 = document.getElementById("text_conainer3");
+
+function fuciones() {
+    sumit ();
+    nombre();
+}
+
+function nombre() {
+    nombre1.value = txt1Value;
+    nombre2.value = txt2Value;
+    nombre3.value = txt3Value;
+}
+
 function sumit () {
     txt1Value = txt1.value;
     txt2Value = txt2.value;
@@ -48,15 +63,20 @@ function sumit () {
     mag2_date2 = dato5.value;
     mag3_date2 = dato6.value;
 
-    datos = [
-        mag1_date1,
-        mag2_date1,
-        mag3_date1, 
+    magX = {
+        date1: parseInt(mag1_date1),
+        date2: parseInt(mag1_date2),
+    };
 
-        mag1_date2, 
-        mag2_date2,
-        mag3_date2,
-    ];
+    datosMag2 = {
+        date1: parseInt(mag2_date1),
+        date2: parseInt(mag2_date2),
+    };
+
+    datosMag3 = {
+        date1: parseInt(mag3_date1),
+        date2: parseInt(mag3_date2),
+    };
 
     magnitud1 = {
         valor1: mag1_date1,
@@ -78,8 +98,9 @@ function sumit () {
         magnitud2,
         magnitud3
     ];
+}
 
-    datos_object.forEach(element =>  {
+/*     datos_object.forEach(element =>  {
         console.log(element)
         if (element.valor2 === "x") {
             datoX = element.valor2;
@@ -88,17 +109,19 @@ function sumit () {
             console.log("el dato sin la x es: " + datoX + " y i es: " + i);
         }
     });
-    while (i <= largo_datos) {
-        if (datos_object[i].valor2 === "x") {
-            datoX = datos_object[i].valor2;
-            console.log("el dato con la x es: " + datoX + " y i es: " + i);
-        } else {
-            console.log("el dato sin la x es: " + datoX + " y i es: " + i);
-        }
-        i++;
-    }
+} */
+
+var resultado;
+function operaciones() {
+    var farción1 = datosMag2.date1 * datosMag3.date1;
+    var farción2 = datosMag2.date2 * datosMag3.date2;
+    var multiplicación = farción2 * magX.date1;
+    var divición =  multiplicación / farción1;
+    return resultado = divición;
 }
 
-function operaciones() {
-    
+var result_ipunt = document.getElementById("resultado");
+function iprimir() {
+
+    result_ipunt.innerHTML = "el resultado es = " + resultado + " " + txt1Value;
 }

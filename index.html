@@ -22,43 +22,56 @@
         <p>ahz click en el checkbox si la magnitud es inversa, a la magnitud a despejar. Si es la magnitud a despejar no hacer nada</p>
 
         <form action="">
-            <input type="text" placeholder="magnitud 1" id="magnitud 1" required>
+            <input type="text" placeholder="magnitud a despejar" id="magnitud 1" required>
             <label for="check-box1">
                 <samp>es inversa</samp>
-                <input type="checkbox" value="1" id="check-box1" required>
+                <input type="checkbox" value="1" id="check-box1" />
             </label>
 
             <input type="text" placeholder="magnitud 2" id="magnitud 2" required>
             <label for="check-box2">
                 <samp>es inversa</samp>
-                <input type="checkbox" value="1" id="check-box2" required>
+                <input type="checkbox" value="1" id="check-box2" />
             </label>
 
             <input type="text" placeholder="magnitud 3" id="magnitud 3" required>
             <label for="check-box3">
                 <samp>es inversa</samp>
-                <input type="checkbox" value="1" id="check-box3">
+                <input type="checkbox" value="1" id="check-box3" />
             </label>
             /
             <label for="btn_names">
                 <samp>enviar magnitudes</samp>
-                <button onclick="myFunction()" id="btn_names">dar nombres</button>
+                <button onclick="fuciones()" id="btn_names">dar nombres</button>
             </label>
         </form>
 
         <br>
         <p>Y despues los datos de las magnitudes, si es la magnitud incognita poner una x</p>
 
+        <div>
+        <input type="text" id="text_conainer1" readonly>
+        <input type="text" id="text_conainer2" readonly>
+        <input type="text" id="text_conainer3" readonly> 
+        </div>
+
+        <form action="">
+            <label for="magnitud1_dato1">
         <input type="text" placeholder="dato1" id="magnitud1_dato1">
         <input type="text" placeholder="dato1" id="magnitud2_dato1">
-        <input type="text" placeholder="dato1" id="magnitud3_dato1">
+        <input type="text" placeholder="dato1" id="magnitud3_dato1"> 
+        <span>mangnitudes iniciales o de ejemplo</span>
+    </label>
         <br>
-        <input type="text" placeholder="dato2" id="magnitud1_dato2">
+        <label for="magnitud1_dato2">
+        <input type="text" placeholder="x" id="magnitud1_dato2" value="x" readonly>
         <input type="text" placeholder="dato2" id="magnitud2_dato2">
         <input type="text" placeholder="dato2" id="magnitud3_dato2">
+        <samp>magnitudes segundas o de despeje, tambien x</samp>
+    </label>
+    </form>
     </div>
-    <p>resultado = </p>
-
+    <p id="resultado"> </p>
     <script src="./regla de 3.js"></script>
 </body>
 </html>
