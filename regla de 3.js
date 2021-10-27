@@ -33,7 +33,7 @@ var base_de_datos = [
 var i = 0;
 
 var datoID, largo_datos;
-var magnitud1, magnitud2, magnitud3, datoID;
+var magnitud1, magnitud2, magnitud3;
 
 var nombre1 = document.getElementById("text_conainer1");
 var nombre2 = document.getElementById("text_conainer2");
@@ -56,13 +56,27 @@ function sumit () {
     txt3Value = txt3.value;  
 
     mag1_date1 = dato1.value;
-    mag2_date1 = parseInt(dato2.value);
-    mag3_date1 = parseInt(dato3.value);
+    mag2_date1 = dato2.value;
+    mag3_date1 = dato3.value;
 
-    mag1_date2 = parseInt(dato4.value);
-    mag2_date2 = parseInt(dato5.value);
-    mag3_date2 = parseInt(dato6.value);
+    mag1_date2 = dato4.value;
+    mag2_date2 = dato5.value;
+    mag3_date2 = dato6.value;
 
+    magX = {
+        date1: parseInt(mag1_date1),
+        date2: parseInt(mag1_date2),
+    };
+
+    datosMag2 = {
+        date1: parseInt(mag2_date1),
+        date2: parseInt(mag2_date2),
+    };
+
+    datosMag3 = {
+        date1: parseInt(mag3_date1),
+        date2: parseInt(mag3_date2),
+    };
 
     magnitud1 = {
         valor1: mag1_date1,
@@ -85,9 +99,6 @@ function sumit () {
         magnitud3
     ];
 }
-
-
-
 
 var resultado;
 function operaciones() {
