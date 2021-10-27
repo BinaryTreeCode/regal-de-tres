@@ -56,27 +56,13 @@ function sumit () {
     txt3Value = txt3.value;  
 
     mag1_date1 = dato1.value;
-    mag2_date1 = dato2.value;
-    mag3_date1 = dato3.value;
+    mag2_date1 = parseInt(dato2.value);
+    mag3_date1 = parseInt(dato3.value);
 
-    mag1_date2 = dato4.value;
-    mag2_date2 = dato5.value;
-    mag3_date2 = dato6.value;
+    mag1_date2 = parseInt(dato4.value);
+    mag2_date2 = parseInt(dato5.value);
+    mag3_date2 = parseInt(dato6.value);
 
-    magX = {
-        date1: parseInt(mag1_date1),
-        date2: parseInt(mag1_date2),
-    };
-
-    datosMag2 = {
-        date1: parseInt(mag2_date1),
-        date2: parseInt(mag2_date2),
-    };
-
-    datosMag3 = {
-        date1: parseInt(mag3_date1),
-        date2: parseInt(mag3_date2),
-    };
 
     magnitud1 = {
         valor1: mag1_date1,
@@ -100,17 +86,8 @@ function sumit () {
     ];
 }
 
-    for (let i = 0; i < datos_object.length-1; i++) {
-        var element = datos_object[i];
-        if (element.valor2 === "x") {
-            datoID = i;
-            console.log("el dato con la x es: " + element.valor2 + " y i es: " + i);
-        } else {
-            console.log("el dato sin la x es: " + element.valor2 + " y i es: " + i);
-        }
-    }
 
-}
+
 
 var resultado;
 function operaciones() {
