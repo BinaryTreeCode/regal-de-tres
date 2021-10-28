@@ -13,23 +13,12 @@ var box1 = document.getElementById("check-box1");
 var box2 = document.getElementById("check-box2");
 var box3 = document.getElementById("check-box3");
 
-check1 = box1.checked;
-    if (check1 == true) {
-        axy= "x";
-    }
-    else {
-        axy= "y";
-    }
+
 
 
 var txt1Value, txt2Value, txt3Value;
-var datos = [];
 var datos_object = [];
 
-var base_de_datos = [
-    datos,
-    datos_object,
-]
 var i = 0;
 
 var datoID, largo_datos;
@@ -68,15 +57,33 @@ function sumit () {
         date2: parseInt(mag1_date2),
     };
 
-    datosMag2 = {
-        date1: parseInt(mag2_date1),
-        date2: parseInt(mag2_date2),
-    };
+    check2 = box2.checked;
+    if (check2 == true) {
+        datosMag2 = {
+            date1: parseInt(mag2_date2),
+            date2: parseInt(mag2_date1),
+        };
+    }
+    else {
+        datosMag2 = {
+            date1: parseInt(mag2_date1),
+            date2: parseInt(mag2_date2),
+        };
+    }
 
-    datosMag3 = {
-        date1: parseInt(mag3_date1),
-        date2: parseInt(mag3_date2),
-    };
+    check3 = box3.checked;
+    if (check3 == true) {
+        datosMag3 = {
+            date1: parseInt(mag3_date2),
+            date2: parseInt(mag3_date1),
+        }
+    }
+    else {
+        datosMag3 = {
+            date1: parseInt(mag3_date1),
+            date2: parseInt(mag3_date2),
+        }
+        }
 
     magnitud1 = {
         valor1: mag1_date1,
@@ -111,6 +118,5 @@ function operaciones() {
 
 var result_ipunt = document.getElementById("resultado");
 function iprimir() {
-
     result_ipunt.innerHTML = "el resultado es = " + resultado + " " + txt1Value;
 }

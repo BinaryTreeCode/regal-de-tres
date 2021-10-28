@@ -26,5 +26,13 @@ header {
 }
 
 .borar input{
-    all: initial;
+    color: initial;
+    text-align: center;
+    background-color: initial; 
+    border-color: initial;
+    border: 0;
+    margin: 2px;
+    text-align: center;
+    border-style:none;
 }
+
